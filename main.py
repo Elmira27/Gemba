@@ -18,15 +18,15 @@ def start (update, context):
   chat_id = update.message.chat_id
   print (f"text: {text}")
   print (f"chat_id: {chat_id}")
-  context.bot.send_message (chat_id=chat_id, text="Готов?")
+
   custom_keyboard = []
   for obj in result:
     custom_keyboard.append([obj['Date']])
   
   reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard, one_time_keyboard=True)
-  #res = context.bot.send_message(chat_id=chat_id, 
-                 #text="Когда Гемба?", 
-                 #reply_markup=reply_markup)
+  res = context.bot.send_message(chat_id=chat_id, 
+                 text="Когда Гемба?", 
+                 reply_markup=reply_markup)
 
 def help (update, context):
   text=update.message.text
