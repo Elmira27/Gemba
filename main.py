@@ -2,18 +2,32 @@ import telegram
 from telegram.ext import Updater
 from telegram.ext import CommandHandler #для команд
 from telegram.ext import MessageHandler, Filters # для сообщений
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+scope = ['https://spreadsheets.google.com/feeds'] 
+creds = ServiceAccountCredentials.from_json_keyfile_name('Elmira -d733fc163f9b.json',scope)
+client=gspread.authorize (creds)
+url='https://docs.google.com/spreadsheets/d/1kUwxMUe5PigOxQsZ9knPM4tlBooskFviX4Hk0UUQ5HA/edit?usp=sharing'
+sheet = client.open_by_url(url).sheet1
+result = sheet.get_all_records()
+
 token = '885734453:AAFcxaCIG3jJ_wNT1FqNC5ghvZt9wtyOwIA'
 def start (update, context):
   text=update.message.text
   chat_id = update.message.chat_id
   print (f"text: {text}")
   print (f"chat_id: {chat_id}")
-  context.bot.send_message (chat_id=chat_id, text="Heeeey")
-  custom_keyboard = [['18.04.2019'], ['23.04.2019'], ['30.04.2019'],  ['02.05.2019'], ['07.05.2019'], ['10.05.2019'], ['14.05.2019'], ['16.05.2019'], ['21.05.2019'], ['23.05.2019'], ['28.05.2019']]
+  context.bot.send_message (chat_id=chat_id, text="Готов?")
+  custom_keyboard = []
+  for obj in result:
+    custom_keyboard.append([obj['Date']])
+  
   reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard, one_time_keyboard=True)
-  context.bot.send_message(chat_id=chat_id, 
-                 text="Когда Гемба?", 
-                 reply_markup=reply_markup)
+  #res = context.bot.send_message(chat_id=chat_id, 
+                 #text="Когда Гемба?", 
+                 #reply_markup=reply_markup)
+
 def help (update, context):
   text=update.message.text
   chat_id = update.message.chat_id
@@ -23,33 +37,11 @@ def help (update, context):
 def message (update,context):
   text= update.message.text
   chat_id=update.message.chat_id
-  if text == '18.04.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Dream city 2 оч")
-  if text == '23.04.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Мангилик 2,3 оч")
-  if text == '25.04.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Времена года Лето 2 оч блок Е")
-
-  if text == '30.04.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Nura Esil 3")
-  if text == '02.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="BI City Seoul блок H")
-  if text == '07.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Арнау 5")
-  if text == '10.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Ray Residence 1 оч")
-  if text == '14.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Panorama Park 4 оч")
-  if text == '16.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="ADAL")
-  if text == '21.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Ботанический")
-  if text == '23.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Esil Riverside 1 оч")
-  if text == '28.05.2019':
-    context.bot.send_message(chat_id=chat_id, text ="Only")
-  #else:
-      #zcontext.bot.send_message(chat_id=chat_id, text ="Отдыхай, Гембы нет)")
+  print(text)
+  for obj in result:
+    if text == obj['Date']:
+      context.bot.send_message(chat_id=chat_id, text=obj['Name'])
+  
 upd= Updater (token, use_context=True)
 start_handler=CommandHandler ('start', start)
 message_handler= MessageHandler(Filters.text,message)
