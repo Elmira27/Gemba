@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "elmira-238208",
+  "private_key_id": "d733fc163f9b435ebf52e84b15c1da30545e0a4a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC7eJ+LJvhh1KZw\nykFBnPngt3DxypvEGXSFN6K9ekWNS4G8tpRK2P+zma6TXpxlClRjYDf+Gkf1oSxe\ndHHD/Ct0sAKNQBG+v8+z133Gyzhu4zOEQUKYukedyKwec5Snwaz6uq99q2IAPYUQ\nS17IlJHB2uPURnJipLWqVO/28HqVmnmjRvUT2hev94VMeHSV8Smj7EVdmhMmR7nc\nF8U2YcqHGzzsqz77DFn1HxwguH6BZ0gBaax+O8Djls+yz3HROqQMSEZMzFD9S+Gs\nqcVYMgQ+PHYVd6ljZXqpDA78nSkCbBbqTjqqSDYSleJjFhP/98ZYN03tGS6T0yPK\nN4d1Hos1AgMBAAECggEAKYwUza3MD8BlR6tnVW+A6Ga3MvrsVQQwMOLw3+20ctk4\nTjanfEQFvUuypynpXrIwnBqDpj60UnFPCDrlyKG/DrwAQMYheKUBVtHL5+37WoXj\nUaz14aus+gCydog2eow/dgzAHkmIbVW1AvS1M55LhEsqwU2AhbCLq01qJg/LFxLV\nPKgyAkMlyK8PqV76+2ngGcEW4TJ0PGkNTDpo2pQyjF6/flbLrYdb0XUtMVhLHMPs\nTdkTlTC45RQUUpS6N7eXtOEnMyANwGRsdzFGiZbPZEjzgi4F9iAMByQqFSCKorz+\nb/OEAdTfvVnQ3eKfPWwu7I+LEZ6w1Xk9DljLwQsbSQKBgQDhV6FHXhMdX9IzQml/\nCDagYH0WKeI15ge2K0hOC3cqctlpTJufQleGBgT2jlEdU5sCshdudZ9BTlJJFdlw\nSKYxndh7RcGxlFVda78rnhxHFRANQ3rK+FdtTIG90y2q5KQ9OXvEiEiJsdv7WnS0\nWAjlJqW0XXUw447u+DcWiH90HQKBgQDU+f4xHoLC2RUhLFnjfBi+ylVoqmG5aVkd\nOJBzwv13BfY9xADn+gtOf1wXNOHTeMAlvws4hnrXMfKFBiQzu4M9wwwCGldxKmE9\nAQqB/MrDkgyToXoVa8OhIKmUwXNW12LBTVfxCzualuyZVOohXJEnQF/6EVWuSmtj\nQhPK1xgX+QKBgQCTGDyy9XnMxuvTghqTTa0660E74oNDY7DM/VvpdhqHnwjEb7l2\nMDwpxGwg9a2FUznwfIhHFoiqfJHCG30giovR/5N8hIB3hrhijx7vPfp/fARKZC4X\nqByJwFNAskUxNKbxQEDGfZ+8IlnSra1Yu86yppOsNQV2sFRxMZ3kG533EQKBgQCU\nKGELnJUMpWWMkUTq+s5gE3N8/2JCUKYcrNfYoCIhZbVaXHrg5dJtxi2zOyeKLGtH\nFvLgXLUh9O4oWhBfKKfxFDnLULXZ1MiWXp4HtWr8yCIVpXS/aBtMgONXx4fMNsPN\ng1eVKOJK9YkcVbUWhkW4D5F07hAz0jOIdlQ8fIuXSQKBgQCmpnrDiDFAE7GVy6Pk\nngoAGi/0OvPqYirOt4kluMglbNCuNOgX5ejAHKj6hTJzSIyP2noC0hKtWpyuhPvp\n0Y9zhD4eG+YPLKf31iyBYjsXr1og8azjAvlDJKt9IXeFW07R6aR8NOxSNNMIhZh/\nniS2EboWVtAEozjeCjG9kPZ01Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "elmira@elmira-238208.iam.gserviceaccount.com",
+  "client_id": "114785252626855762130",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/elmira%40elmira-238208.iam.gserviceaccount.com"
+}
